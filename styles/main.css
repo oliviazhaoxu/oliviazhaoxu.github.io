@@ -1,0 +1,60 @@
+body {
+    font-weight: 300;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.5;
+}
+
+p {
+    margin: 10px, 0px;
+}
+
+h1 {
+    color: #114222;
+    font-size: 5em;
+} 
+
+h2 {
+    color: #114222;
+    font-size: 2em;
+    text-align: center;
+    margin: 10px, 0px;
+}
+
+h3 {
+    font-display: bold;
+}
+
+#subhead {
+    font-style: italic;
+    font-size: 2em;
+}
+
+a {
+    color: #114222;
+}
+
+a:hover {
+    color: #225ea8;
+}
+
+a:visited {
+    color: #848b23;
+}
+
+a:focus {
+    
+}
+
+.list {
+    line-height: 2;
+}
+
+#bread {
+    float: left;
+    max-width: 30%;
+    text-align: left;
+}
+
+#bread img {
+    width: 100%;
+}
