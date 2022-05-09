@@ -1,0 +1,201 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+	color: whitesmoke;
+	font-family: "futura", lucida, sans-serif;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+.container {
+	/* position: relative; */
+	padding: 10px 0px;
+}
+
+main {
+	height: auto;
+}
+
+header {
+	padding: 10px;
+	margin: 10px 0px;
+}
+
+nav li {
+	list-style-type: none;
+	display: flex;
+	margin: 0 20px;
+	font-size: 20px;
+}
+
+.nav_item a {
+	text-decoration: none;
+	color: whitesmoke;
+	padding: 10px;
+}
+
+.nav_item a:hover {
+	padding:0.5em 3em;
+	border:0.16em solid #FFFFFF;
+	margin:0 0.3em 0.3em 0;
+}
+
+h1 {
+    font-family: "palatino", Georgia, serif;
+	font-size: 50px;
+	text-align: center;
+}
+
+.container li {
+	list-style-type: none;
+}
+
+.intro {
+	line-height: 2rem;
+	padding: 40px 80px;
+}
+
+a {
+	color: blanchedalmond;
+}
+
+a :visited {
+	color:bisque;
+}
+
+a.button{
+/* https://fdossena.com/?p=html5cool/buttons/i.frag */
+	display:inline-block;
+	padding:0.5em 3em;
+	border:0.16em solid #FFFFFF;
+	margin:0 0.3em 0.3em 0;
+	box-sizing: border-box;
+	text-decoration:none;
+	text-transform:uppercase;
+	font-family:'Roboto',sans-serif;
+	font-weight:400;
+	color:#FFFFFF;
+	text-align:center;
+	transition: all 0.15s;
+	}
+	a.button:hover{
+	color:#DDDDDD;
+	border-color:#DDDDDD;
+	}
+	a.button:active{
+	color:#BBBBBB;
+	border-color:#BBBBBB;
+	}
+
+
+.playlist {
+	position: relative; 
+	/* immediate parent should be relative */
+	width: 100%;
+	animation-name: spinning;
+	animation-duration: 40s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+.playlist_large {
+	width: 50vw;
+}
+
+.playlist_middle {
+	width: 40vw; 
+}
+ 
+.playlist_small {
+	width: 30vw; 
+}
+
+#playlist_7 {
+	left: 0vw;
+	top: 10vw; 
+} 
+
+#playlist_17 {
+	left: 50vw;
+	top: 20vw;
+}
+
+#playlist_46 {
+	left: 7vw;
+	top: 28vw;
+}
+
+#playlist_59 {
+	left: -8vw;
+	top: 44vw;
+}
+
+#playlist_65 {
+	left: 39vw;
+	top: 50vw;
+} 
+
+.album_cover {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.playlist:hover {
+	animation-play-state: paused;
+}
+
+.playlist:hover .box_overlay {
+	opacity: .7;
+	transition: opacity 500ms ease;
+}
+
+.single_cover {
+	width: 100%;
+}
+
+@media only screen and (min-width: 45em) { 
+
+	.box_overlay {
+	  position: absolute;
+	  top: 0;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  height: 100%;
+	  width: 100%;
+	  opacity: 0;
+	  background-color: #000;
+	  border-radius: 50%;
+	  transition: opacity .5s ease;
+	}
+	
+	.text_overlay {
+		-webkit-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		font-size: 30px;
+	}
+}
+
+@media all and (max-width:30em){
+	a.button{
+		display:block;
+		margin:0.4em auto;
+	}
+}
+
+@keyframes spinning {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}

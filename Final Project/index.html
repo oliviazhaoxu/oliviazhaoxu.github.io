@@ -1,0 +1,76 @@
+<!-- Inspiration: https://www.wanda.net/
+-->
+<!DOCTYPE html>
+<html class="html" lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="Fidelity">
+        <title>Fidelity</title>
+        <meta name="description" content="A weekly newsletter of playlists. From Gen.">
+        <link rel="stylesheet" href="./styles/main.css">
+        <link rel="stylesheet" href="./styles/simple-grid.css">
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <li>
+                    <ul class="nav_item"><a href="./index.html">Home</a></ul>
+                    <ul class="nav_item"><a href="./about.html">About</a></ul>
+                    <ul class="nav_item"><a href="./subscribe form.html">Subscribe</a></ul>
+                    <ul class="nav_item"><a href="./all_playlists.html">All playlists</a></ul>
+                </li>
+            </nav>
+            <div class="container">
+                <h1>Fidelity</h1>
+                <h2>Hi team. Welcome back. I'm happy you're here. I hope the music helps you.</h2>
+                <h2>Below are some selected playlists from my weekly newsletter. Sign up at the top corner or click the album cover to discover.</h2>
+            </div>
+        </header>
+        <main>
+            <!-- How to create a text overlay: 
+            1. create a seperate element <div class="box_overlay"> to lay over the pic
+            2. define .box_overlay in main.css for background color and opacity transition
+            3. define .text_overlay to move the text to the center of box_overlay, with transform: translate
+            -->
+            <div class="container">
+                <section id="playlist_7" class="playlist playlist_middle">
+                    <img class="album_cover" src="./assets/playlist_7/thirteen_tales_from.jpeg" alt="cover art of Dandy Warhol's album Thirteen Tales From Urban Bohemia">
+                    <div class="box_overlay">
+                        <div class="text_overlay"><a href="./sensual_existentialism.html">FIDELITY.III.7.: SENSUAL EXISTENTIALISM</a></div>
+                    </div>
+                </section>
+
+                <section id="playlist_17" class="playlist playlist_small">
+                    <img class="album_cover" src="./assets/playlist_17/mines.jpeg" alt="cover art of Menomena's album Mines">
+                    <div class="box_overlay">
+                        <div class="text_overlay"><a href="./to_my_crush.html">FIDELITY.III.17.: TO MY CRUSH FROM TEN YEARS AGO</a></div>
+                    </div>
+                </section>
+
+                <section id="playlist_46" class="playlist playlist_large">
+                    <img class="album_cover" src="./assets/playlist_46/led_zeppelin_ii.jpeg" alt="cover art of Led Zeppelin's album Led Zeppelin II">
+                    <div class="box_overlay">
+                        <div class="text_overlay"><a href="./literary.html">FIDELITY.III.46.: LITERARY</a></div>
+                    </div>
+                </section>
+
+                <section id="playlist_59" class="playlist playlist_small">
+                    <img class="album_cover" src="./assets/playlist_59/haunt_me.jpeg" alt="cover art of Tim Hecker's album Haunt Me">
+                    <div class="box_overlay">
+                        <div class="text_overlay"><a href="./sit_around_the.html">FIDELITY.III.59.: SIT AROUND THE FIRE</a></div>
+                    </div>
+                </section>
+
+                <section id="playlist_65" class="playlist playlist_middle">
+                    <img class="album_cover" src="./assets/playlist_65/peel.jpeg" alt="cover art of KMRU's album Peel">
+                    <div class="box_overlay">
+                        <div class="text_overlay"><a href="./longing_and_acceptance.html">FIDELITY.III.65.: LONGING & ACCEPTANCE MUSIC</a></div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </body>
+
+</html>
