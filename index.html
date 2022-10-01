@@ -1,76 +1,433 @@
-<!-- Inspiration: https://www.wanda.net/
--->
+<!-- credit and thanks to Tiffany Du's Personal Portfolio Page https://codepen.io/tiffanyadu/pen/QpdMmr -->
 <!DOCTYPE html>
-<html class="html" lang="en">
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Olivia's Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Knewave&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="Fidelity">
-        <title>Fidelity</title>
-        <meta name="description" content="A weekly newsletter of playlists. From Gen.">
-        <link rel="stylesheet" href="./styles/main.css">
-        <link rel="stylesheet" href="./styles/simple-grid.css">
-    </head>
+<body>
+<!-- partial:index.partial.html -->
+<body data-spy="scroll" data-target="#main-nav" data-offset="60">
+  <!-- Fixed Navbar -->
+  <nav id="main-nav" class="navbar navbar-default ">
+    <div class="container-fluid">
+      <!-- Collapsible Menu -->
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a class="scroll" href="#top">Home <span class="sr-only">(current)</span></a></li>
+          <li><a class="scroll" href="#about">About</a></li>
+          <li><a class="scroll" href="#portfolio">Portfolio</a></li>
+          <li><a class="scroll" href="#contact">Contact</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <!-- Jumbotron -->
+  <header id="home" class="jumbotron">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1 class="title">Hello</h1>
+          <h1 class="title">My name is Olivia.</h1>
+          <p>I'm an audio journalist who loves coding.</p>
+          <p>Nice to meet you.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Main Content Begins -->
+  <div id="content" class="container-fluid text-center">
+    <!-- About Me Section -->
+    <section id="about" class="row bg-white bg-shadow">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1 class="mb-30">About Me</h1>
+        </div>
+      </div>
 
-    <body>
-        <header>
-            <nav>
-                <li>
-                    <ul class="nav_item"><a href="./index.html">Home</a></ul>
-                    <ul class="nav_item"><a href="./about.html">About</a></ul>
-                    <ul class="nav_item"><a href="./subscribe form.html">Subscribe</a></ul>
-                    <ul class="nav_item"><a href="./all_playlists.html">All playlists</a></ul>
-                </li>
-            </nav>
-            <div class="container">
-                <h1>Fidelity</h1>
-                <h2>Hi team. Welcome back. I'm happy you're here. I hope the music helps you.</h2>
-                <h2>Below are some selected playlists from my weekly newsletter. Sign up at the top corner or click the album cover to discover.</h2>
+      <div class="row mb-30">
+        <div class="col-xs-12 col-md-3 col-md-offset-1 col-lg-2 col-lg-offset-2">
+          <img class="img-responsive center-block profile mb-30" src="./assets/olivia_profile_pic.jpg" alt="Olivia Zhao's Profile Photo">
+        </div>
+        <div class="col-sm-8 col-sm-offset-2 col-md-7 col-md-offset-0 col-lg-6 text-left">
+          <p>Born and raised in Sichuan, China, I was the only child of two factory workers. Neither of my parents went to university, but they raised me on a varied diet of feminist books and punk music, mainly by free-range parenting. I became a liberal and adventurous person, and found my true calling in journalism.</p>
+          <p>As a young kid I was drawn to crime fictions and detective stories. Filled with a burning desire to just <i>know</i>, I followed Agatha Christie and Arthur Conan Doyle as they unraveled one mystery after another with their words. Later I discovered podcasts, and immediately fell under the spell of true crime and long-form investigation.</p>
+          <p>Currently, I'm pursuing a Master's degree at the Graduate School of Journalism, UC Berkeley.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <button class="btn td-btn outline green mt-30" data-toggle="modal" data-target="#resumeModal">View my Resume</button>
+        </div>
+      </div>
+    </section>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="row bg-white bg-shadow">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1 class="mb-60">Portfolio</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div id="projects" class="carousel slide col-xs-12" data-ride="carousel" data-interval="false">
+          <div class="row">
+            <!-- Carousel Prev Button -->
+            <div class="col-xs-1">
+              <a class="left carousel-control" href="#projects" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
             </div>
-        </header>
-        <main>
-            <!-- How to create a text overlay: 
-            1. create a seperate element <div class="box_overlay"> to lay over the pic
-            2. define .box_overlay in main.css for background color and opacity transition
-            3. define .text_overlay to move the text to the center of box_overlay, with transform: translate
-            -->
-            <div class="container">
-                <section id="playlist_7" class="playlist playlist_middle">
-                    <img class="album_cover" src="./assets/playlist_7/thirteen_tales_from.jpeg" alt="cover art of Dandy Warhol's album Thirteen Tales From Urban Bohemia">
-                    <div class="box_overlay">
-                        <div class="text_overlay"><a href="./sensual_existentialism.html">FIDELITY.III.7.: SENSUAL EXISTENTIALISM</a></div>
-                    </div>
-                </section>
-
-                <section id="playlist_17" class="playlist playlist_small">
-                    <img class="album_cover" src="./assets/playlist_17/mines.jpeg" alt="cover art of Menomena's album Mines">
-                    <div class="box_overlay">
-                        <div class="text_overlay"><a href="./to_my_crush.html">FIDELITY.III.17.: TO MY CRUSH FROM TEN YEARS AGO</a></div>
-                    </div>
-                </section>
-
-                <section id="playlist_46" class="playlist playlist_large">
-                    <img class="album_cover" src="./assets/playlist_46/led_zeppelin_ii.jpeg" alt="cover art of Led Zeppelin's album Led Zeppelin II">
-                    <div class="box_overlay">
-                        <div class="text_overlay"><a href="./literary.html">FIDELITY.III.46.: LITERARY</a></div>
-                    </div>
-                </section>
-
-                <section id="playlist_59" class="playlist playlist_small">
-                    <img class="album_cover" src="./assets/playlist_59/haunt_me.jpeg" alt="cover art of Tim Hecker's album Haunt Me">
-                    <div class="box_overlay">
-                        <div class="text_overlay"><a href="./sit_around_the.html">FIDELITY.III.59.: SIT AROUND THE FIRE</a></div>
-                    </div>
-                </section>
-
-                <section id="playlist_65" class="playlist playlist_middle">
-                    <img class="album_cover" src="./assets/playlist_65/peel.jpeg" alt="cover art of KMRU's album Peel">
-                    <div class="box_overlay">
-                        <div class="text_overlay"><a href="./longing_and_acceptance.html">FIDELITY.III.65.: LONGING & ACCEPTANCE MUSIC</a></div>
-                    </div>
-                </section>
+            <!-- blank space -->
+            <div class="col-xs-2"></div>
+            <!-- carousel card -->
+            <div class="col-xs-6">
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <div class="carousel-caption card">
+                      <h3>Audio Piece</h3>
+                      <h4>Told you I'm an audio journalist</h4>
+                      <!-- <button class="btn td-btn small outline green" data-toggle="modal" data-target="#tributeModal">View Details</button> -->
+                      <a href="https://oliviazhaoxu.wixsite.com/olivia/blog">
+                        <button class="btn td-btn small outline green">View Details</button>
+                    </a>
+                  </div>
+                </div><!-- /.item -->
+                <div class="item">
+                  <div class="carousel-caption card">
+                      <h3>Photo Gallery</h3>
+                      <h4>Ok I only took up camera this year but don't tell my future boss</h4>
+                      <button class="btn td-btn small outline green" data-toggle="modal" data-target="#tmsModal">View Details</button>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="carousel-caption card">
+                      <h3>Coding Projects</h3>
+                      <h4>Including the one that you're seeing now :)</h4>
+                      <button class="btn td-btn small outline green" data-toggle="modal" data-target="#rbModal">View Details</button>
+                  </div>
+                </div><!-- /.item -->
+              </div><!-- /.carousel-inner -->
             </div>
-        </main>
-    </body>
 
+            <div class="col-xs-2"></div>
+            <div class="col-xs-1">
+              <!-- Carousel Next Button -->
+              <a class="right carousel-control" href="#projects" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div><!-- / Next Btn -->
+            <div class="col-xs-12">
+              <!-- Indicators -->
+              <ol class="carousel-indicators mt-30">
+                <li data-target="#projects" data-slide-to="0" class="active"></li>
+                <li data-target="#projects" data-slide-to="1"></li>
+                <li data-target="#projects" data-slide-to="2"></li>
+              </ol>
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+        </div><!-- /#projects -->
+      </div><!-- /.row -->
+    </section>
+    <!-- Contact Me Section -->
+    <section id="contact" class="row bg-white bg-shadow">
+      <div class="col-xs-12">
+        <h1 class="mb-30">Yell at me or something</h1>
+        <button class="btn btn-default td-btn outline green" data-toggle="modal" data-target="#contactModal">Contact Form</button>
+      </div>
+      <div id="follow-me" class="col-xs-12">
+        <a class="social" href="https://www.linkedin.com/in/olivia-zhao-69331512a/" target="_blank" title="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a class="social" href="https://twitter.com/OZhaoxu" target="_blank" title="Twitter">
+          <i class="fa-brands fa-twitter"></i>
+        </a>        
+        <a class="social" href="https://github.com/oliviazhaoxu" target="_blank" title="Github">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a class="social" href="https://soundcloud.com/zhao-xu-233382804" target="_blank" title="SoundCloud">
+          <i class="fa-brands fa-soundcloud"></i>
+        </a>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="row text-left bg-white bg-shadow">
+      <div class="col-xs-12 text-center">
+        <small class="gray">Copyright &copy; 2022 | Olivia Zhao </small>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Resume Modal -->
+  <div class="modal fade" id="resumeModal" tabindex="-1" role="dialog" aria-labelledby="resumeTitle">
+    <div class="modal-dialog wide" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h3 class="modal-title text-center" id="resumeTitle">Resume</h3>
+        </div><!-- /.modal-header -->
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+              <h2>Experience</h2>
+            </div>
+          </div>
+          <div class="row mb-15">
+            <div class="col-md-3 col-lg-2 col-lg-offset-1">
+              <p class="year">2022 Jun - Present</p>
+            </div>
+            <div class="col-md-9 col-lg-8">
+              <h4>Intern</h4>
+              <p class="mb-0"><strong>Marketplace - How We Survive & Make Me Smart</strong></p>
+              <p>Interviewed experts and edited clips for Make Me Smart, logged and cleaned tapes for How We Survive, built projects in Audition and Pro Tools, and participated in group edits and feedback sessions.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3 col-lg-2 col-lg-offset-1">
+              <p class="year">2020 Mar - 2021 Aug</p>
+            </div>
+            <div class="col-md-9 col-lg-8">
+              <h4>Intern</h4>
+              <p class="mb-0"><strong>United Nations Institute for Training and Research</strong></p>
+              <p>Assisted in the recruitment and contract management, human resources administration, as well as staff development.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3 col-lg-2 col-lg-offset-1">
+              <p class="year">2020 Mar - 2021 Aug</p>
+            </div>
+            <div class="col-md-9 col-lg-8">
+              <h4>Intern</h4>
+              <p class="mb-0"><strong>Reuters Beijing Bureau</strong></p>
+              <p>Investigated China’s financial news and economic trends for in-depth news coverage on issues such as the big data industry in Jiangsu province, national healthcare reform, 4+7 drug bulk-buy program, etc.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-lg-5 col-lg-offset-1">
+              <div class="row">
+                <div class="col-xs-12">
+                  <h2>Education</h2>
+                </div>
+              </div>
+              <div class="row mb-15">
+                <div class="col-sm-3 col-md-4">
+                  <p class="year">2021 - 2023</p>
+                </div>
+                <div class="col-sm-9 col-md-8">
+                  <p class="mb-0"><strong>Master of Journalism</strong></p>
+                  <p>University of California, Berkeley</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3 col-md-4">
+                  <p class="year">2014 - 2018</p>
+                </div>
+                <div class="col-sm-9 col-md-8">
+                  <p class="mb-0"><strong>BA in Foreign Languages</strong></p>
+                  <p>Beijing Foreign Studies University</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-5">
+              <div class="row">
+                <div class="col-xs-12">
+                  <h2>Skills</h2>
+                </div>
+              </div>
+              <div class="row">
+                <ul>
+                  <li><strong>Web:</strong> HTML, CSS, JavaScript, Python</li>
+                  <li><strong>Languages:</strong> Mandarin, English, French</li>
+                  <li><strong>DAW:</strong> Protools, Adobe Audition</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row text-center">
+            <a class="btn td-btn outline green mb-30" href="./assets/Olivia_Zhao_Resume.pdf" target="_blank" download><span class="glyphicon glyphicon-download-alt"></span> Download PDF</a>
+            <a class="btn td-btn outline green iconBtn mb-30" href="https://www.linkedin.com/in/olivia-zhao-69331512a/" target="_blank"><span class="glyphicon glyphicon-user"></span> View LinkedIn Profile</a>
+          </div>
+          <div class="modal-footer center">
+            <button type="button" class="btn td-btn outline small" data-dismiss="modal">Close Resume</button>
+          </div><!-- /.modal-footer -->
+        </div><!-- /.modal-body -->
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <!-- Audio Piece Modal -->
+  <div class="modal fade" id="tributeModal" tabindex="-1" role="dialog" aria-labelledby="tributeTitle">
+    <div class="modal-dialog wide" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h3 class="modal-title text-center" id="tributeTitle">Audio Piece</h3>
+        </div><!-- /.modal-header -->
+        <div class="modal-body">
+  
+
+
+          <div class="modal-footer center">
+            <button type="button" class="btn td-btn outline small" data-dismiss="modal">Close Audio Project</button>
+          </div><!-- /.modal-footer -->
+        </div><!-- /.modal-body -->
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <!-- Photo Gallery Modal -->
+  <div class="modal fade" id="tmsModal" tabindex="-1" role="dialog" aria-labelledby="tmsTitle">
+    <div class="modal-dialog wide" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h3 class="modal-title text-center" id="tmsTitle">Photo Gallery</h3>
+        </div><!-- /.modal-header -->
+        <div class="modal-body">
+
+          <!-- credit to Derek Morash's Lazy Load Images on codepen.io for the photo gallery below https://codepen.io/derekmorash/pen/NjBvdX-->
+          <ul class="card-list">	
+            <li class="card">
+              <a class="card-image" href="daily_life.html" target="_blank" style="background-image: url(./assets/SF_MOMA/boys_watch_art.JPG);" data-image-full="./assets/SF_MOMA/boys_watch_art.JPG">
+                <img src="./assets/SF_MOMA/boys_watch_art.JPG" alt="two boys sat watching art" />
+              </a>
+              <div class="card-description">
+                <h2>Daily Life</h2>
+                <p>Sep 17, 2022. UC Berkeley campus, SF MOMA, and more</p>
+              </div>
+            </li>
+            
+            <li class="card">
+              <a class="card-image" href="cal_football.html" target="_blank" style="background-image: url(./assets/Cal_Football/_MG_0290.JPG);" data-image-full="./assets/Cal_Football/_MG_0290.JPG">
+                <img src="./assets/Cal_Football/_MG_0290.JPG" alt="a picture of cal football game" />
+              </a>
+              <div class="card-description">
+                <h2>Cal Football</h2>
+                <p>Sep 24, 2022. Cal vs. Arizona. Go Bears!</p>
+              </div>
+            </li>
+
+          </ul>
+
+          <div class="modal-footer center">
+            <button type="button" class="btn td-btn outline small" data-dismiss="modal">Close Project</button>
+          </div><!-- /.modal-footer -->
+        </div><!-- /.modal-body -->
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <!-- Coding Project Modal -->
+  <div class="modal fade" id="rbModal" tabindex="-1" role="dialog" aria-labelledby="rbTitle">
+    <div class="modal-dialog wide" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h3 class="modal-title text-center" id="rbTitle">Project Details</h3>
+        </div><!-- /.modal-header -->
+        <div class="modal-body">
+          <!-- coding project 1: Gen's Music Playlist -->
+          <div class="bg-white bg-shadow grid-container">
+            <div class="grid-item">
+              <h4>Gen's Playlist</h4>
+              <p>Gen used to work as a professional music journalist, and I have subscribed to her weekly music newsletter since day one. Her recommendations greatly shaped my taste in music, and I want to share it with more people. So, after obtaining her permission, I created this website for her, and for everyone who craves the company of music</p>
+            </div>
+            <div class="floated grid-item">
+              <a href="https://github.com/oliviazhaoxu/playlist">
+                <img src="./assets/sreenshot_playlist.png" alt="a screenshot of the website Gen's Music Playlist">
+              </a>
+            </div>
+          </div>
+
+          <!-- coding project 2: My Portfolio -->
+          <div class="bg-white bg-shadow grid-container">
+            <div class="grid-item">
+              <h4>My Portfolio</h4>
+              <p>A portfolio website to showcase my journalist work, including audio, photo, and coding projects.</p>
+            </div>
+            <div class="floated grid-item">
+              <a href="https://github.com/oliviazhaoxu/oliviazhaoxu.github.io">
+                <img src="./assets/sreenshot_portfolio.png" alt="a screenshot of this website">
+              </a>
+            </div>
+          </div>
+
+          <!-- coding project 3: Task Manager -->
+          <div class="bg-white bg-shadow grid-container">
+            <div class="grid-item">
+              <h4>In Progress: Task Manager</h4>
+              <p>I am building a task manager for my front-end web architecture class this semester. We will be using HTML/CSS/JavaScript/React.</p>
+            </div>
+            <div class="floated grid-item">
+              <a href="https://github.com/UCB-INFO-FRONTEND-WEBARCH/assignment-1-oliviazhaoxu">
+                <img src="./assets/sreenshot_task.png" alt="a screenshot of a task manager website">
+              </a>
+            </div>
+          </div>
+
+          <div class="modal-footer center">
+            <button type="button" class="btn td-btn outline small" data-dismiss="modal">Close Project</button>
+          </div><!-- /.modal-footer -->
+        </div><!-- /.modal-body -->
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <!-- Contact Modal -->
+  <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactTitle">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content bg-pink">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h3 class="modal-title" id="contactTitle">Contact Me</h3>
+        </div><!-- /.modal-header -->
+        <div class="modal-body">
+          <form class="mb-15">
+            <div class="form-group">
+              <label class="sr-only" for="name">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <label class="sr-only" for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <label class="sr-only" for="subject">Subject</label>
+              <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+            </div>
+            <div class="form-group">
+              <label class="sr-only" for="message">Message</label>
+              <textarea class="form-control" id="message" rows="6" placeholder="Your message here..." required></textarea>
+            </div>
+            <small>*All fields are required</small>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"> I'm a robot!
+              </label>
+            </div>
+          </form>
+          <div class="modal-footer">
+            <button type="button" class="btn td-btn outline small white" data-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn td-btn outline small white">Send Message</button>
+          </div><!-- /.modal-footer -->
+        </div><!-- /.modal-body -->
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+</body>
+<!-- JavaScript -->
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+<script  src=".styles/script.js"></script>
+<script src="https://kit.fontawesome.com/67467b51fa.js" crossorigin="anonymous"></script>
+</body>
 </html>
