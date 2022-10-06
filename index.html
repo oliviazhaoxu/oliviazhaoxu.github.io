@@ -48,7 +48,7 @@
     <section id="about" class="row bg-white bg-shadow">
       <div class="row">
         <div class="col-xs-12">
-          <h1 class="mb-30">About Me</h1>
+          <h1>About Me</h1>
         </div>
       </div>
 
@@ -73,7 +73,7 @@
     <section id="portfolio" class="row bg-white bg-shadow">
       <div class="row">
         <div class="col-xs-12">
-          <h1 class="mb-60">Portfolio</h1>
+          <h1>Portfolio</h1>
         </div>
       </div>
       <div class="row">
@@ -93,31 +93,35 @@
               <div class="carousel-inner" role="listbox">
                 <div class="item active">
                   <div class="carousel-caption card">
-                      <h3>Audio Piece</h3>
-                      <h4>Told you I'm an audio journalist</h4>
-                      <!-- <button class="btn td-btn small outline green" data-toggle="modal" data-target="#tributeModal">View Details</button> -->
-                      <a href="https://oliviazhaoxu.wixsite.com/olivia/blog">
-                        <button class="btn td-btn small outline green">View Details</button>
-                    </a>
+                    <h3>Audio Reporting</h3>
+                    <h4>It's just me and my microphone against the world.</h4>
+                    <button class="btn td-btn small outline green" data-toggle="modal" data-target="#audioModal">View Details</button>
                   </div>
                 </div><!-- /.item -->
                 <div class="item">
                   <div class="carousel-caption card">
-                      <h3>Photo Gallery</h3>
-                      <h4>Ok I only took up camera this year but don't tell my future boss</h4>
-                      <button class="btn td-btn small outline green" data-toggle="modal" data-target="#tmsModal">View Details</button>
+                    <h3>Print Reporting</h3>
+                    <h4>I covered community news for Richmond Confidential.</h4>
+                    <button class="btn td-btn small outline green"><a href="https://richmondconfidential.org/author/xzhao/" target="_blank">View Details</a></button>
                   </div>
                 </div>
                 <div class="item">
                   <div class="carousel-caption card">
-                      <h3>Coding Projects</h3>
-                      <h4>Including the one that you're seeing now :)</h4>
-                      <button class="btn td-btn small outline green" data-toggle="modal" data-target="#rbModal">View Details</button>
+                    <h3>Photo Gallery</h3>
+                    <h4>Ok I only took up camera this year but don't tell my future boss.</h4>
+                    <button class="btn td-btn small outline green" data-toggle="modal" data-target="#photoModal">View Details</button>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="carousel-caption card">
+                    <h3>Coding Projects</h3>
+                    <h4>Including the one that you're seeing now. :)</h4>
+                    <button class="btn td-btn small outline green" data-toggle="modal" data-target="#codingModal">View Details</button>
                   </div>
                 </div><!-- /.item -->
               </div><!-- /.carousel-inner -->
             </div>
-
+            <!-- blank space -->
             <div class="col-xs-2"></div>
             <div class="col-xs-1">
               <!-- Carousel Next Button -->
@@ -132,6 +136,7 @@
                 <li data-target="#projects" data-slide-to="0" class="active"></li>
                 <li data-target="#projects" data-slide-to="1"></li>
                 <li data-target="#projects" data-slide-to="2"></li>
+                <li data-target="#projects" data-slide-to="3"></li>
               </ol>
             </div><!-- /.col -->
           </div><!-- /.row -->
@@ -141,7 +146,7 @@
     <!-- Contact Me Section -->
     <section id="contact" class="row bg-white bg-shadow">
       <div class="col-xs-12">
-        <h1 class="mb-30">Yell at me or something</h1>
+        <h1>Yell at me or something</h1>
         <button class="btn btn-default td-btn outline green" data-toggle="modal" data-target="#contactModal">Contact Form</button>
       </div>
       <div id="follow-me" class="col-xs-12">
@@ -264,37 +269,100 @@
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
 
-  <!-- Audio Piece Modal -->
-  <div class="modal fade" id="tributeModal" tabindex="-1" role="dialog" aria-labelledby="tributeTitle">
+  <!-- Audio Reporting Modal -->
+  <div class="modal fade" id="audioModal" tabindex="-1" role="dialog" aria-labelledby="audioTitle">
     <div class="modal-dialog wide" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h3 class="modal-title text-center" id="tributeTitle">Audio Piece</h3>
+          <h3 class="modal-title text-center" id="audioTitle">Audio Reporting</h3>
         </div><!-- /.modal-header -->
         <div class="modal-body">
-  
+          <!-- audio piece 1: Mandarin: Accent and Identity -->
+          <div class="bg-white bg-shadow">
+            <div class="audio-item">
+              <h4>Mandarin: Accent and Identity</h4>
+              <p>At 17, I went to a university in Beijing. It was the first time I left my little hometown behind, and also the first time that I discovered, I’ve been saying the name of “salt” wrong the whole time...</p>
+              <p>Listen to my story here:</p>
+              <!-- audio player credit to Karl Saunders on CodePen.io https://codepen.io/Mobius1/pen/XKxOPK-->
+              <div class="audio-container">
+                <audio id="player-1">
+                  <source src="./assets/audio/Accent and identity.mp3" controls>
+                </audio>              
+              </div>
+            </div>
 
+            <div class="audio-item">
+              <h4>Christmas Tree Hunt</h4>
+              <p>You can find the whole radio show on North Gate Radio's <a href="https://projects.journalism.berkeley.edu/radio/show/most-wonderful-time-of-year/">archive</a>.</p>
+              <p>Christmas is around the corner. And North Gate Radio’s Olivia Zhao went to a Christmas tree lot in Albany to find the perfect Christmas Tree.</p>
+              <div class="audio-container">
+                <audio id="player-2">
+                  <source src="./assets/audio/Christmas Tree Hunt.mp3" controls>
+                </audio> 
+              </div>             
+            </div>
+
+            <div class="audio-item">
+              <h4>Haunted History Halloween Hike</h4>
+              <p>You can find the whole radio show on North Gate Radio's <a href="https://projects.journalism.berkeley.edu/radio/show/hikes-basins-and-clocks/">archive</a>.</p>
+              <p>If you happened to have walked past the Point Richmond Market & Deli this past Saturday afternoon, you might have heard a woman in a lavender, vintage dress and silk ribbon bonnet crying hysterically. Don’t panic, you didn’t step through a time machine. This was a character in the Halloween Haunted History Hike led by Karen Buchanan.</p>
+              <div class="audio-container">
+                <audio id="player-3">
+                  <source src="./assets/audio/Haunted Hike.mp3" controls>
+                </audio>              
+              </div>
+            </div>
+
+            <div class="audio-item">
+              <h4>Hosting: North Gate Radio</h4>
+              <p>North Gate Radio is a weekly radio show produced by the Graduate School of Journalism at UC Berkeley. Listen live each Thursday on KALX 90.7 FM at 9 AM.</p>
+              <p>For the first episode of the show, I am the host with Lola Proctor. I interviewed a health expert at UC Berkeley for how to have a safe Halloween trick-or-treat.</p>
+              <div class="audio-container">
+                <audio id="player-4">
+                  <source src="./assets/audio/Local Legends.mp3" controls>
+                </audio>              
+              </div>
+            </div>
 
           <div class="modal-footer center">
-            <button type="button" class="btn td-btn outline small" data-dismiss="modal">Close Audio Project</button>
+            <button type="button" class="btn td-btn outline small" data-dismiss="modal">Close</button>
           </div><!-- /.modal-footer -->
         </div><!-- /.modal-body -->
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
 
-  <!-- Photo Gallery Modal -->
-  <div class="modal fade" id="tmsModal" tabindex="-1" role="dialog" aria-labelledby="tmsTitle">
+  <!-- Print Reporting Modal -->
+  <div class="modal fade" id="printModal" tabindex="-1" role="dialog" aria-labelledby="printTitle">
     <div class="modal-dialog wide" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h3 class="modal-title text-center" id="tmsTitle">Photo Gallery</h3>
+          <h3 class="modal-title text-center" id="printTitle">Print Reporting</h3>
+        </div>
+        <div class="modal-body">
+          <div class="bg-white bg-shadow">
+            <!-- content - add later -->
+          </div>
+        </div>
+        <div class="modal-footer center">
+          <button type="button" class="btn td-btn outline small" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Photo Gallery Modal -->
+  <div class="modal fade" id="photoModal" tabindex="-1" role="dialog" aria-labelledby="photoTitle">
+    <div class="modal-dialog wide" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h3 class="modal-title text-center" id="photoTitle">Photo Gallery</h3>
         </div><!-- /.modal-header -->
         <div class="modal-body">
-
-          <!-- credit to Derek Morash's Lazy Load Images on codepen.io for the photo gallery below https://codepen.io/derekmorash/pen/NjBvdX-->
+          <!-- photo gallery credit to Derek Morash's Lazy Load Images on codepen.io https://codepen.io/derekmorash/pen/NjBvdX-->
           <ul class="card-list">	
             <li class="card">
               <a class="card-image" href="daily_life.html" target="_blank" style="background-image: url(./assets/SF_MOMA/boys_watch_art.JPG);" data-image-full="./assets/SF_MOMA/boys_watch_art.JPG">
@@ -316,10 +384,19 @@
               </div>
             </li>
 
+            <li class="card">
+              <a class="card-image" href="" target="_blank" style="background-image: url(./assets/Cal_Football/_MG_0290.JPG);" data-image-full="./assets/Cal_Football/_MG_0290.JPG">
+                <img src="./assets" alt="a picture of" />
+              </a>
+              <div class="card-description">
+                <h2>Fleet Week</h2>
+                <p>Oct 8, 2022. San Francisco Fleet Week</p>
+              </div>
+            </li>
           </ul>
 
           <div class="modal-footer center">
-            <button type="button" class="btn td-btn outline small" data-dismiss="modal">Close Project</button>
+            <button type="button" class="btn td-btn outline small" data-dismiss="modal">Close</button>
           </div><!-- /.modal-footer -->
         </div><!-- /.modal-body -->
       </div><!-- /.modal-content -->
@@ -327,19 +404,19 @@
   </div><!-- /.modal -->
 
   <!-- Coding Project Modal -->
-  <div class="modal fade" id="rbModal" tabindex="-1" role="dialog" aria-labelledby="rbTitle">
+  <div class="modal fade" id="codingModal" tabindex="-1" role="dialog" aria-labelledby="codingTitle">
     <div class="modal-dialog wide" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h3 class="modal-title text-center" id="rbTitle">Project Details</h3>
+          <h3 class="modal-title text-center" id="codingTitle">Project Details</h3>
         </div><!-- /.modal-header -->
         <div class="modal-body">
           <!-- coding project 1: Gen's Music Playlist -->
           <div class="bg-white bg-shadow grid-container">
             <div class="grid-item">
               <h4>Gen's Playlist</h4>
-              <p>Gen used to work as a professional music journalist, and I have subscribed to her weekly music newsletter since day one. Her recommendations greatly shaped my taste in music, and I want to share it with more people. So, after obtaining her permission, I created this website for her, and for everyone who craves the company of music</p>
+              <p>Gen used to work as a professional music journalist, and I have subscribed to her weekly music newsletter since day one. Her recommendations greatly shaped my taste in music, and I want to share it with more people. So, after obtaining her permission, I created this website for her, and for everyone who craves the company of music.</p>
             </div>
             <div class="floated grid-item">
               <a href="https://github.com/oliviazhaoxu/playlist">
@@ -375,7 +452,7 @@
           </div>
 
           <div class="modal-footer center">
-            <button type="button" class="btn td-btn outline small" data-dismiss="modal">Close Project</button>
+            <button type="button" class="btn td-btn outline small" data-dismiss="modal">Close</button>
           </div><!-- /.modal-footer -->
         </div><!-- /.modal-body -->
       </div><!-- /.modal-content -->
@@ -427,7 +504,8 @@
 <!-- JavaScript -->
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
 <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
-<script  src=".styles/script.js"></script>
+<script src=".styles/script.js"></script>
 <script src="https://kit.fontawesome.com/67467b51fa.js" crossorigin="anonymous"></script>
+<script src="./styles/audio_player_script.js"></script>
 </body>
 </html>

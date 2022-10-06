@@ -17,6 +17,8 @@ body {
 h1 {
   font-family: 'Knewave', cursive;
   font-size: 3rem;
+  line-height: 0.4;
+  margin-bottom: 50px;
 }
 
 h2 {
@@ -151,7 +153,7 @@ hr {
 .jumbotron {
   background: white;
   background-size: cover;
-  height: 125%;
+  height: 100%;
   margin: 0;
   min-height: 510px;
   position: relative;
@@ -185,6 +187,7 @@ section.row,
 footer.row {
   padding: 30px 30px 60px;
 }
+
 /*** Modal ***/
 .modal-dialog.wide {
   width: 90%;
@@ -476,14 +479,7 @@ footer.row {
     color: #6b7a78;
     top: -2px;
   }
-  .navbar-default .navbar-toggle:focus,
-  .navbar-default .navbar-toggle:hover {
-    background-color: transparent;
-    border-color: #29a598;
-  }
-  .navbar-default .navbar-toggle .active {
-    color: #29a598;
-  }
+
   .navbar-collapse {
     background-color: #fffefd;
     background-color: rgba(255,254,253,0.97);
@@ -504,6 +500,188 @@ footer.row {
   }
   #projects .card {
     text-align: center;
+  }
+}
+
+/* Audio Player */
+
+.audio-item {
+  width: 70%;
+  margin: auto;
+  padding: 40px;
+}
+
+.playr {
+  width: 100%;
+  background-color: white;
+  border: 3px solid black;
+  padding: 10px;
+  color: black;
+}
+
+.playr-ui {
+  display: flex;
+  align-items: stretch;
+}
+
+.playr-controls {
+  width: 10%;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.playr-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  padding: 0 15px;
+  position: relative;
+}
+
+.playr-ui.volume-controls .playr-panel {
+  width: 70%;
+}
+
+.playr-controls button {
+  color: black;
+  background-color: transparent;
+  border: medium none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 28px;
+  line-height: 1;
+}
+
+.playr-controls button:hover {
+  color: olivedrab;
+}
+
+.playr-controls button::after {
+  font-family: "Material Design Icons";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.playr-play::after {
+  content: "";
+}
+
+.playr.playing .playr-play::after {
+  content: "";
+}
+
+.playr-fastforward::after {
+  content: "";
+}
+
+.playr-rewind::after {
+  content: "";
+}
+
+.playr-rewind::after,
+.playr-fastforward::after {
+  font-size: 21px;
+}
+
+.playr-progress {
+  background-color: grey;
+  height: 4px;
+  bottom: 2px;
+  left: 15px;
+  position: absolute;
+  width: calc(100% - 30px);
+  cursor: pointer;
+}
+
+.playr-progress-bar {
+  background-color: olivedrab;
+  height: 100%;
+  transform: scale3d(0, 1, 1);
+  transform-origin: 0 0 0;
+  width: 100%;
+}
+
+.playr-duration,
+.playr-filename {
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  width: 50%;
+  font-weight: 600;
+}
+
+.playr-filename {
+  left: 15px;
+  text-align: left;
+  left: 15px;
+  overflow: hidden;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.playr-duration {
+  right: 15px;
+  text-align: right;
+}
+
+.playr-volume {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.playr-volume-box.hidden {
+  background-color: #38354a;
+  bottom: 0;
+  height: 100px;
+  position: absolute;
+  width: 35px;
+  display: none;
+}
+
+.playr-volume-box {
+  background-color: lightgray;
+  height: 4px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.playr-volume-box span {
+  display: block;
+  background-color: olivedrab;
+  height: 100%;
+  width: 100%;
+  transform: scale3d(1, 1, 1);
+  transform-origin: 0 0 0;
+}
+
+/* compact */
+.playr.compact .playr-rewind,
+.playr.compact .playr-fastforward {
+  display: none;
+}
+
+.playr-filename.overflow span {
+  animation: 5000ms linear 0ms normal forwards infinite running scroll;
+  display: inline-block;
+  margin-right: 0;
+  padding-right: 100%;
+  transform: translate3d(0px, 0px, 0px);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+  100% {
+    transform: translate3d(-100%, 0px, 0px);
   }
 }
 
@@ -548,7 +726,7 @@ footer.row {
 	font-size: 1rem;
 	text-decoration: none;
 	overflow: hidden;
-	box-shadow: 0 0 3rem -1rem rgba(0,0,0,0.5);
+  border: 3px black solid;
 	transition: transform 0.1s ease-in-out, box-shadow 0.1s;
 }
 
