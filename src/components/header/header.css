@@ -1,0 +1,12 @@
+header {
+    background: url(../../assets/background.jpg);
+    height: 100vh;
+    padding-top: 7rem;
+    overflow: hidden;
+}
+
+.header__container {
+    text-align: center;
+    height: 100%;
+    position: relative;
+}

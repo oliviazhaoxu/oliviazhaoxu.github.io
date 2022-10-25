@@ -1,0 +1,11 @@
+#audio {
+    height: 200vh;
+}
+
+.audio__container h2 {
+    margin-top: 4rem;
+}
+
+.audio__container p {
+    margin-top: 1rem;
+}
