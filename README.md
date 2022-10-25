@@ -1,2 +1,2 @@
 # oliviazhaoxu.github.io
-My portfolio website. Built with React.
+My first portfolio website. 
