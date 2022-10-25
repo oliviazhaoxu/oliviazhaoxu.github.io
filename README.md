@@ -1,2 +1,2 @@
 # oliviazhaoxu.github.io
- my portfolio
+My portfolio website. Built with React.
